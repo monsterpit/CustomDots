@@ -37,6 +37,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="G24-n1-3E7" id="NWx-sK-qUm"/>
+                        <outlet property="scrollView" destination="e6t-zS-loK" id="IwJ-Vf-tm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

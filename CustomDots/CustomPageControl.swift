@@ -6,11 +6,18 @@
 //  Copyright © 2019 MyGlamm. All rights reserved.
 //
 
+//https://stackoverflow.com/questions/38869171/custom-uipagecontrol-with-dot-images/42324241#42324241
+//https://www.oipapio.com/question-1146491
+//https://stackoverflow.com/questions/36965228/change-page-indicator-image-smpagecontrol-eaintroview-in-swift
+//https://stackoverflow.com/questions/262156/uiimage-rounded-corners
+//https://medium.com/@anitaa_1990/create-a-horizontal-paging-uiscrollview-with-uipagecontrol-swift-4-xcode-9-a3dddc845e92
+//https://guides.codepath.com/ios/Using-UIPageControl
+
 import UIKit
 
 class CustomPageControl: UIPageControl {
-    let locationArrow: UIImage = UIImage(named: "SelectedPage")!
-    let pageCircle: UIImage = UIImage(named: "UnselectedPage")!
+    let currentPageImage: UIImage = UIImage(named: "SelectedPage")!
+    let otherPageImage: UIImage = UIImage(named: "UnselectedPage")!
     
     override var numberOfPages: Int {
         didSet {
@@ -39,10 +46,10 @@ class CustomPageControl: UIPageControl {
             
             if imageView == nil {
                 if i == 0 {
-                    imageView = UIImageView(image: locationArrow)
+                    imageView = UIImageView(image: currentPageImage)
                    
                 } else {
-                    imageView = UIImageView(image: pageCircle)
+                    imageView = UIImageView(image: otherPageImage)
                 }
                 
               imageView?.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
